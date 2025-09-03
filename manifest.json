@@ -1,6 +1,6 @@
 {
-  "name": "Попутчик.Посылка",
-  "short_name": "Попутчик",
+  "name": "CargoGo",
+  "short_name": "CargoGo",
   "description": "Доставка посылок через путешественников",
   "start_url": "/index.html",
   "display": "standalone",
