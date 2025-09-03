@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#50C878" />
+  <title>Попутчик.Посылка</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="icons/icon-192x192.png">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>📬 Попутчик.Посылка</h1>
+      <p>Доставка посылок через путешественников — просто, дёшево, надёжно.</p>
+    </header>
+
+    <main>
+      <!-- Форма путешественника -->
+      <section class="card">
+        <h2>✈️ Я в путь — могу взять посылку</h2>
+        <form id="travelerForm">
+          <input type="text" placeholder="Откуда? (напр. Москва)" required>
+          <input type="text" placeholder="Куда? (напр. Тбилиси)" required>
+          <input type="number" placeholder="Макс. вес (кг)" min="0.1" step="0.1" required>
+          <input type="number" placeholder="Вознаграждение (руб)" min="100" required>
+          <button type="submit">Добавить маршрут</button>
+        </form>
+      </section>
+
+      <!-- Форма отправителя -->
+      <section class="card">
+        <h2>📦 Мне нужно отправить посылку</h2>
+        <form id="senderForm">
+          <input type="text" placeholder="Откуда?" required>
+          <input type="text" placeholder="Куда?" required>
+          <input type="number" placeholder="Вес посылки (кг)" min="0.1" step="0.1" required>
+          <textarea placeholder="Описание (необязательно)"></textarea>
+          <button type="submit">Опубликовать запрос</button>
+        </form>
+      </section>
+
+      <!-- Список запросов -->
+      <section class="matches" id="matches">
+        <h2>🎯 Совпадения</h2>
+        <p id="noMatches">Пока нет совпадений. Добавьте свой маршрут или запрос.</p>
+        <ul id="matchList"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Попутчик.Посылка — просто как разговор в самолёте.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
